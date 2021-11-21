@@ -2,6 +2,7 @@ let myLeads = [];
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 const delBtn = document.getElementById("delete-btn");
+const tabBtn = document.getElementById("tab-btn");
 const ulEl = document.getElementById("ul-el");
 
 let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
@@ -16,7 +17,14 @@ inputBtn.addEventListener("click", function(){
     inputEl.value = "";
 })
 
-delBtn.addEventListener("click", function(){
+tabBtn.addEventListener("click", function(){
+    chrome.tabs.query({"active": true, "currentWindow": true}, function(tabs){
+        myLeads.push(tabs[0].url);
+        renderLeads();
+    })
+})
+
+delBtn.addEventListener("dblclick", function(){
     myLeads = [];
     localStorage.clear()
     renderLeads();

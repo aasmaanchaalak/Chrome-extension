@@ -23,18 +23,37 @@ button {
     background-color: steelblue;
 }
 
-#delete-btn{
-    background-color: white;
-    border: 1px solid steelblue;
-    color: steelblue;
-}
-
 #input-btn:hover{
     background-color: skyblue;
 }
 
 #input-btn:active{
     background-color: steelblue;
+}
+
+#tab-btn{
+    background-color: steelblue;
+}
+
+#tab-btn:hover{
+    background-color: skyblue;
+}
+
+#tab-btn:active{
+    background-color: steelblue;
+}
+#delete-btn{
+    background-color: white;
+    border: 1px solid steelblue;
+    color: steelblue;
+}
+
+#delete-btn:hover{
+    color: skyblue;
+}
+
+#delete-btn:active{
+    color:steelblue;
 }
 
 #input-el{
